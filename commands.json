@@ -1,0 +1,8 @@
+{
+"commands": [
+"pip install -r requirements.txt",
+"createdb ai_wrapper_db",
+"psql -U your_db_user -d ai_wrapper_db -c \"CREATE EXTENSION IF NOT EXISTS pgcrypto\"",
+"uvicorn main:app --host 0.0.0.0 --port 8000"
+]
+}
